@@ -1,5 +1,10 @@
 import maze_solver from '../MazeSolver';
 
+type Point = {
+  x: number;
+  y: number;
+};
+
 test('maze solver', function () {
   const maze = [
     'xxxxxxxxxx x',
