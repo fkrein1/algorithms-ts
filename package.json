@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest ArrayList BFSGraphList BFSGraphMatrix BinarySearchList BTBFS BTInOrder BTPostOrder BTPreOrder BubbleSort CompareBinaryTrees DFSGraphList DFSOnBST DijkstraList DoublyLinkedList InsertionSort LinearSearchList LRU Map MazeSolver MergeSort MinHeap PrimsList Queue QuickSort RingBuffer SinglyLinkedList Stack Trie TwoCrystalBalls"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
