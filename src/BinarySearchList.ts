@@ -1,37 +1,18 @@
 export default function bs_list(haystack: number[], needle: number): boolean {
-  let lo = 0;
   let hi = haystack.length;
+  let lo = 0;
 
-  while (lo < hi) {
-    let mid = Math.floor(lo + (hi - lo) / 2);
+  while (hi > lo) {
+    let mid = Math.floor((hi + lo) / 2);
     if (haystack[mid] === needle) {
       return true;
     }
-
-    if (needle > haystack[mid]) {
-      lo = mid + 1;
-    } else {
+    if (haystack[mid] > needle) {
       hi = mid;
+    } else {
+      lo = mid + 1;
     }
   }
 
   return false;
-}
-
-function bs_list_rec(haystack: number[], needle: number): boolean {
-  const mid = Math.floor(haystack.length / 2);
-
-  if (haystack[mid] === needle) {
-    return true;
-  }
-
-  if (haystack.length === 0) {
-    return false;
-  }
-
-  if (haystack[mid] > needle) {
-    return bs_list_rec(haystack.slice(0, mid), needle);
-  } else {
-    return bs_list_rec(haystack.slice(mid + 1, haystack.length), needle);
-  }
 }
