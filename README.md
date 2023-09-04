@@ -10,5 +10,8 @@ Welcome to a super fun, beginner-friendly data structures and algorithms course.
 - [x] Binary Search: BinarySearchList.ts
 - [x] Doubly Linked List: DoublyLinkedList.ts
 - [x] Linear Search: LinearSearchList.ts
+- [x] Maze Solver Recursion: MazeSolver.ts
+- [x] Queue: Queue.ts
 - [x] Singly Link List: SinglyLinkedList.ts
+- [x] Stack: Stack.ts
 - [x] Two Crystall Balls: TwoCrystalBalls.ts

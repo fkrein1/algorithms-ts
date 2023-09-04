@@ -13,34 +13,30 @@ export default class Queue<T> {
     this.head = this.tail = undefined;
   }
 
-  enqueue(item: T): void {
-    const node = { value: item } as Node<T>;
-    this.length++;
+  enqueue(value: T): void {
+    const node = { value } as Node<T>;
 
     if (!this.tail) {
-      this.tail = this.head = node;
+      this.head = this.tail = node;
     } else {
       this.tail.next = node;
       this.tail = node;
     }
+    this.length++;
   }
 
   deque(): T | undefined {
     if (!this.head) {
       return undefined;
+    } else {
+      let val = this.head?.value;
+      this.head = this.head.next;
+      this.length--;
+      return val;
     }
-    this.length--;
-    const head = this.head;
-    this.head = this.head.next;
-
-    if (this.length === 0) {
-      this.tail = undefined;
-    }
-
-    return head.value;
   }
 
   peek(): T | undefined {
-    return this.head?.value;
+    return this.tail?.value;
   }
 }
