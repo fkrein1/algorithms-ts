@@ -8,5 +8,7 @@ Welcome to a super fun, beginner-friendly data structures and algorithms course.
 ### Exercises
 
 - [x] Binary Search: BinarySearchList.ts
+- [x] Doubly Linked List: DoublyLinkedList.ts
 - [x] Linear Search: LinearSearchList.ts
-- [x] Two Crystall Balls - O(sqrt(n)): TwoCrystalBalls.ts
+- [x] Singly Link List: SinglyLinkedList.ts
+- [x] Two Crystall Balls: TwoCrystalBalls.ts
