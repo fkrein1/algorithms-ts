@@ -1,6 +1,6 @@
 type Node<T> = {
   value: T;
-  next?: Node<T>;
+  prev?: Node<T>;
 };
 
 export default class Stack<T> {
@@ -17,7 +17,7 @@ export default class Stack<T> {
     if (!this.head) {
       this.head = node;
     } else {
-      node.next = this.head;
+      node.prev = this.head;
       this.head = node;
     }
     this.length++;
@@ -27,10 +27,10 @@ export default class Stack<T> {
     if (!this.head) {
       return undefined;
     } else {
-      const val = this.head.value;
-      this.head = this.head.next;
+      const head = this.head;
+      this.head = this.head.prev;
       this.length--;
-      return val;
+      return head.value;
     }
   }
 
