@@ -12,6 +12,7 @@ Welcome to a super fun, beginner-friendly data structures and algorithms course.
 - [x] Linear Search
 - [x] Maze Solver Recursion
 - [x] Queue
+- [x] Quick Sort
 - [x] Singly Link List
 - [x] Stack
 - [x] Two Crystall Balls
