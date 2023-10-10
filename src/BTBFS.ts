@@ -1,3 +1,24 @@
-export default function bfs(head: BinaryNode<number>, needle: number): boolean {
+type BinaryNode<T> = {
+  value: T;
+  left: BinaryNode<T> | null;
+  right: BinaryNode<T> | null;
+};
 
+export default function bfs(head: BinaryNode<number>, needle: number): boolean {
+  const queue = [head];
+
+  while (queue.length) {
+    const curr = queue.shift() as BinaryNode<number>;
+
+    if (curr.value === needle) {
+      return true;
+    }
+    if (curr.left) {
+      queue.push(curr.left);
+    }
+    if (curr.right) {
+      queue.push(curr.right);
+    }
+  }
+  return false;
 }

@@ -7,13 +7,14 @@ Welcome to a super fun, beginner-friendly data structures and algorithms course.
 
 ### Exercises
 
-- [x] Binary Search
-- [x] Doubly Linked List
-- [x] Linear Search
-- [x] Maze Solver Recursion
+- [x] Binary search
+- [x] Breadth-first search
+- [x] Doubly linked list
+- [x] Linear search
+- [x] Maze solver recursion
 - [x] Queue
-- [x] Quick Sort
-- [x] Singly Link List
+- [x] Quick sort
+- [x] Singly link ;ist
 - [x] Stack
-- [x] Tree Traversal (Pre, Post and In Order)
-- [x] Two Crystall Balls
+- [x] Tree traversal (Pre, Post and In Order)
+- [x] Two crystall balls
