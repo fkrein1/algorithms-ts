@@ -15,4 +15,5 @@ Welcome to a super fun, beginner-friendly data structures and algorithms course.
 - [x] Quick Sort
 - [x] Singly Link List
 - [x] Stack
+- [x] Tree Traversal (Pre, Post and In Order)
 - [x] Two Crystall Balls
