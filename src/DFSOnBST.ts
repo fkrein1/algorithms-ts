@@ -1,9 +1,3 @@
-type BinaryNode<T> = {
-  value: T;
-  left: BinaryNode<T> | null;
-  right: BinaryNode<T> | null;
-};
-
 function search(curr: BinaryNode<number> | null, needle: number): boolean {
   if (!curr) {
     return false;

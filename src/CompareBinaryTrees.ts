@@ -1,9 +1,3 @@
-type BinaryNode<T> = {
-  value: T;
-  left: BinaryNode<T> | null;
-  right: BinaryNode<T> | null;
-};
-
 export default function compare(
   a: BinaryNode<number> | null,
   b: BinaryNode<number> | null,

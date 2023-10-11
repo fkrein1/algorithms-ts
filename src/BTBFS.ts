@@ -1,9 +1,3 @@
-type BinaryNode<T> = {
-  value: T;
-  left: BinaryNode<T> | null;
-  right: BinaryNode<T> | null;
-};
-
 export default function bfs(head: BinaryNode<number>, needle: number): boolean {
   const queue = [head];
 
