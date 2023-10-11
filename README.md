@@ -14,6 +14,7 @@ Welcome to a super fun, beginner-friendly data structures and algorithms course.
 - [x] Doubly linked list
 - [x] Linear search
 - [x] Maze solver recursion
+- [x] Min heap
 - [x] Queue
 - [x] Quick sort
 - [x] Singly link list
