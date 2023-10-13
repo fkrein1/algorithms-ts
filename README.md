@@ -19,10 +19,11 @@ _Netflix_<br>
 - [x] Insertion sort
 - [x] Linear search
 - [x] Maze solver
-= [x] Merge sort
+- [x] Merge sort
 - [x] Min heap
 - [x] Queue
 - [x] Quick sort
+- [x] Ring buffer
 - [x] Singly link list
 - [x] Stack
 - [x] Tree traversal (pre, post and in order)
