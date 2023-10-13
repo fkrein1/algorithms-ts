@@ -1,47 +1,42 @@
-function walk(
-  graph: WeightedAdjacencyList,
-  curr: number,
-  needle: number,
-  seen: boolean[],
-  path: number[],
-): boolean {
-  if (seen[curr]) {
-    return false;
-  }
-  seen[curr] = true;
-
-  path.push(curr);
-
-  if (curr === needle) {
-    return true;
-  }
-
-  const list = graph[curr];
-
-  for (let i = 0; i < list.length; i++) {
-    const edge = list[i];
-    if (walk(graph, edge.to, needle, seen, path)) {
-      return true;
-    }
-  }
-  path.pop();
-
-  return false;
-}
-
 export default function bfs(
   graph: WeightedAdjacencyList,
   source: number,
   needle: number,
 ): number[] | null {
-  const seen: boolean[] = new Array(graph.length).fill(false);
-  const path: number[] = [];
+  const seen = new Array(graph.length).fill(false);
+  const prev = new Array(graph.length).fill(-1);
 
-  walk(graph, source, needle, seen, path);
+  seen[source] = true;
+  const queue = [source];
 
-  if (path.length === 0) {
+  while (queue.length) {
+    const curr = queue.shift() as number;
+    if (curr === needle) {
+      break;
+    }
+    const adjs = graph[curr];
+    for (let i = 0; i < adjs.length; i++) {
+      const neighbor = adjs[i].to;
+      if (seen[neighbor]) {
+        continue;
+      }
+      seen[neighbor] = true;
+      prev[neighbor] = curr;
+      queue.push(neighbor);
+    }
+  }
+
+  if (prev[needle] === -1) {
     return null;
   }
 
-  return path;
+  let curr = needle;
+  const out: number[] = [];
+
+  while (prev[curr] !== -1) {
+    out.push(curr);
+    curr = prev[curr];
+  }
+
+  return [source].concat(out.reverse());
 }

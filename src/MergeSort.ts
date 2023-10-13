@@ -1,37 +1,29 @@
-export default function merge_sort(arr: number[]): void {
-  if (arr.length > 1) {
-    const middle = Math.floor(arr.length / 2);
-    const left = arr.slice(0, middle);
-    const right = arr.slice(middle);
+export default function merge_sort(arr: number[]): number[] {
+  if (arr.length <= 1) {
+    return arr;
+  }
 
-    merge_sort(left);
-    merge_sort(right);
+  const middle = Math.floor(arr.length / 2);
+  const left = arr.slice(0, middle);
+  const right = arr.slice(middle);
 
-    let i = 0;
-    let j = 0;
-    let k = 0;
+  return merge(merge_sort(left), merge_sort(right));
+}
 
-    while (i < left.length && j < right.length) {
-      if (left[i] < right[j]) {
-        arr[k] = left[i];
-        i++;
-      } else {
-        arr[k] = right[j];
-        j++;
-      }
-      k++;
-    }
+function merge(left: number[], right: number[]): number[] {
+  const result: number[] = [];
+  let leftIndex = 0;
+  let rightIndex = 0;
 
-    while (i < left.length) {
-      arr[k] = left[i];
-      i++;
-      k++;
-    }
-
-    while (j < right.length) {
-      arr[k] = right[j];
-      j++;
-      k++;
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex]) {
+      result.push(left[leftIndex]);
+      leftIndex++;
+    } else {
+      result.push(right[rightIndex]);
+      rightIndex++;
     }
   }
+
+  return result.concat(left.slice(leftIndex), right.slice(rightIndex));
 }

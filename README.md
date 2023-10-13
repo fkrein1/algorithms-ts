@@ -12,10 +12,13 @@ _Netflix_<br>
 - [x] Breadth-first search - Binary tree
 - [x] Breadth-first search - Graph list
 - [x] Breadth-first search - Graph matrix
+- [x] Bubble sort
+- [x] Depth-first search - Binary search tree
+- [x] Depth-first search - Graph list
 - [x] Doubly linked list
 - [x] Insertion sort
 - [x] Linear search
-- [x] Maze solver recursion
+- [x] Maze solver
 = [x] Merge sort
 - [x] Min heap
 - [x] Queue
