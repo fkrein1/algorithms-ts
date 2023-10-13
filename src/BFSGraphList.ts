@@ -38,5 +38,6 @@ export default function bfs(
     curr = prev[curr];
   }
 
-  return [source].concat(out.reverse());
+  out.push(source);
+  return out.reverse();
 }

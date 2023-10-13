@@ -13,15 +13,14 @@ export default class SinglyLinkedList<T> {
   }
 
   prepend(value: T): void {
-    const node = { value } as Node<T>;
-    node.next = this.head
-    this.head = node
+    const node: Node<T> = { value };
+    node.next = this.head;
+    this.head = node;
     this.length++;
   }
 
   insertAt(value: T, idx: number): void {
-    const node = { value } as Node<T>;
-
+    const node: Node<T> = { value };
     let prev = this.head;
     let curr = this.head;
 
@@ -30,7 +29,7 @@ export default class SinglyLinkedList<T> {
       curr = curr.next;
     }
 
-    if (prev?.next) {
+    if (prev && prev.next) {
       node.next = curr;
       prev.next = node;
     }
@@ -39,7 +38,7 @@ export default class SinglyLinkedList<T> {
   }
 
   append(value: T): void {
-    const node = { value } as Node<T>;
+    const node: Node<T> = { value };
 
     if (!this.head) {
       this.head = node;
@@ -57,9 +56,9 @@ export default class SinglyLinkedList<T> {
   remove(value: T): T | undefined {
     let prev = this.head;
     let curr = this.head;
-  
+
     while (curr) {
-      if (curr.value === value && prev?.next) {
+      if (curr.value === value && prev && prev.next) {
         if (prev === curr) {
           this.head = curr.next;
         } else {
@@ -96,7 +95,7 @@ export default class SinglyLinkedList<T> {
       return curr?.value;
     }
 
-    if (prev?.next) {
+    if (prev && prev.next) {
       prev.next = curr?.next;
       this.length--;
     }
