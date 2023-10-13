@@ -15,16 +15,21 @@ _Netflix_<br>
 - [x] Bubble sort
 - [x] Depth-first search - Binary search tree
 - [x] Depth-first search - Graph list
+- [x] Dijkstra's shortest path
 - [x] Doubly linked list
 - [x] Insertion sort
 - [x] Linear search
+- [x] LRU
+- [ ] Map
 - [x] Maze solver
 - [x] Merge sort
 - [x] Min heap
+- [ ] Prim's algorithm
 - [x] Queue
 - [x] Quick sort
 - [x] Ring buffer
 - [x] Singly link list
 - [x] Stack
 - [x] Tree traversal (pre, post and in order)
+- [ ] Trie
 - [x] Two crystall balls
